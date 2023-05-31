@@ -20,11 +20,11 @@ class SimpleChatBot:
         best_answer = None #최적의 답변은 None으로 설정함
         for i, question in enumerate(self.questions): #enumerate함수를 이용해 인덱스와 질문열 값을 가져옴
             distance = self.calc_distance(input_sentence, question)
-            
-            #입력한 문장과 질문열간의 레비슈타인거리를 미리 정의한 함수를 이용하여 구함.
+            #입력한 문장과 질문열간의 레벤슈타인거리를 미리 정의한 함수를 이용하여 구함.
+
             if distance < min_distance: #계산한 거리 중 최소 거리를 찾는 반복문.
                 min_distance = distance
-                best_answer = self.answers[i]#최소 거리를 갖는 답변을 반환
+                best_answer = self.answers[i] #최소 거리를 갖는 답변을 반환
         return best_answer
 
 
